@@ -30,7 +30,7 @@ const funkos = [
 ];
 
 export const ItemListContainer = (props) => {
-    const [data, setData] = useState ([]);
+    const [data, setData] = useState ([funkos]);
 
     const {categoriaId} = useParams();
 
@@ -45,11 +45,12 @@ export const ItemListContainer = (props) => {
     } else {
         getData.then(res => setData(res))
      }
+     
 
     }, [categoriaId])
 
     const onAdd = (quantity) => {
-        console.log("Compraste $(quantity) unidades");
+        console.log("quantity:", quantity);
     }
     return (
         <>

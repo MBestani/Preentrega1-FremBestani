@@ -8,6 +8,7 @@ export const ItemDetail = ({ data }) => {
                 <img className="detail__image" src="{data.image}}" alt="" />
                 <div className="content">
                     <h1>{data.title}</h1>
+                    <img src={data.image} alt="" />
                 </div>
             </div>
         </div>

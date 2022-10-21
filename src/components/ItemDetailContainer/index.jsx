@@ -28,7 +28,7 @@ const funkos = [
 ];
 
 export const ItemDetailContainer = () => {
-    const [data, setData] = useState({});
+    const [data, setData] = useState([funkos]);
     const { detalleId } = useParams();
 
     useEffect(() => {
@@ -40,8 +40,7 @@ export const ItemDetailContainer = () => {
 
         getData.then(res => setData(res.find(funko => funko.id === parseInt (detalleId))));
 
-    }, [])
-
+    }, )
 
     return (
         <ItemDetail data={data} />
