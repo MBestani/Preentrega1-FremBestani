@@ -7,6 +7,8 @@ import ItemListContainer from './components/ItemListContainer';
 import Cart from './components/Cart';
 import CartProvider from './context/CartContext';
 
+
+
 export const CartContext = React.createContext([]);
 
 
@@ -22,9 +24,9 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
-            <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
+            <Route path="/category/:categoryId" element={<ItemListContainer />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />
+            <Route path="/detail/:detailId" element={<ItemDetailContainer />} />
           </Routes>
         </CartProvider>
 

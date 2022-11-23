@@ -6,10 +6,10 @@ import { CartContext } from "../../App";
 
 const Item = ({ id , info }) => {
     const  nombre  = useContext(CartContext);
-    console.log ('Item: ', nombre);
+
 
     return (
-        <Link to={`/detalle/${id}`} className="funko">
+        <Link to={`/detail/${id}`} className="funko">
             <img src={info.image} alt="" />
             <p>{info.title}</p>
         </Link>

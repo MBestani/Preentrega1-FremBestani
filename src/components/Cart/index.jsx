@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import { useCartContext } from '../../context/CartContext';
 import ItemCart from "../ItemCart";
 
-const Cart = () => {
-    const {cart, totalPrice} = useCartContext();
+const Cart = () => 
+{
+    const {cart, totalPrice, clearCart} = useCartContext();
 
     const order = {
         buyer:{
@@ -22,7 +23,6 @@ const Cart = () => {
     const db = getFirestore();
     const ordersCollection = collection (db, 'orders');
     addDoc(ordersCollection, order)
-    .then(({id}) => console.log(id))
     }
 
     if (cart.length === 0) {
@@ -43,7 +43,9 @@ const Cart = () => {
             total: ${totalPrice()}
         </p>
         <button onClick={handleClick}>Emitir Compra</button>
+        <button onClick={clearCart}>Vaciar Carrito</button>
         </>
+    
     )
 }
 
