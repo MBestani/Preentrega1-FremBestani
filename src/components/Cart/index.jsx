@@ -5,6 +5,8 @@ import { useCartContext } from '../../context/CartContext';
 import ItemCart from "../ItemCart";
 import { useState } from "react";
 
+
+
 const Cart = () => {
     const [dataForm, setDataForm] = useState({
         name: '',
@@ -13,7 +15,8 @@ const Cart = () => {
         address:'', 
     });
     const { cart, totalPrice, clearCart } = useCartContext();
-
+ const emitirCompra = async (e) => {
+    e.preventDefault ()
     const order = {
         
         buyer: {
@@ -25,11 +28,10 @@ const Cart = () => {
         items: cart.map(product => ({ id: product.id, title: product.title, price: product.price, quantity: product.quantity })),
         total: totalPrice(),
     }
-
-    const emitirCompra = () => {
-        const db = getFirestore();
-        const ordersCollection = collection(db, 'orders');
-        addDoc(ordersCollection, order)
+   
+        const db = getFirestore()
+        const orders = collection(db, 'orders')
+        addDoc(orders, order)
     }
 
     if (cart.length === 0) {
