@@ -57,7 +57,7 @@ const Cart = () => {
     return (
         <div>
             <h1>Carrito</h1>
-                {isId && <p>Orden generada con exito: {isId}</p>}
+         
 
             <>
                 {
@@ -100,7 +100,7 @@ const Cart = () => {
 
                 <button onClick={clearCart}>Vaciar Carrito</button>
             </>
-
+       {isId && <p>Orden generada con exito: {isId}</p>}
         </div>
     )
 }

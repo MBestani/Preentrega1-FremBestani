@@ -3,7 +3,7 @@
 Realice un ecommerce orientado al mundo friki, de momento solo cuenta con dos secciones funkos y figuras, mas adelante me gustaria agregar una seccion mangas y una seccion nombrada otros productos (tazas, llaveros, etc)
 
 <!-- Deploy -->
-https://mbestani.github.io/
+https://entrega-final-frem-bestani.vercel.app/
 
 <!-- Aproximacion -->
 Decidi realizar un ecommerce, tuve serios problemas porque justo lo agarre en una epoca complicada con el trabajo y la facultad, pero personalmente encontre muy interesante react, me gustaria ahora que tengo mas tiempo sentarme y crear un sitio mas detallado.
