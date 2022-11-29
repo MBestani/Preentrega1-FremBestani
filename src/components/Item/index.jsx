@@ -5,7 +5,7 @@ import React, {useContext} from "react";
 import { CartContext } from "../../App";
 
 const Item = ({ id , info }) => {
-    const  nombre  = useContext(CartContext);
+    const  name  = useContext(CartContext);
 
 
     return (
