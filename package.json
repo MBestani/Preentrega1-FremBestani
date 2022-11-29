@@ -1,5 +1,4 @@
-{ "homepage": "https://MBestani.github.io/entregaFinal-FremBestani",
-  "name": "my-eccomerce",
+{  "name": "my-eccomerce",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
