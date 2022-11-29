@@ -34,14 +34,16 @@ const Cart = () => {
         const orders = collection(db, 'orders')
         addDoc(orders, order)
             .then(resp => setIsId(resp.id))
-            // .finally(()=> clearCart())
+            .finally(()=> clearCart())
     }
 
     if (cart.length === 0) {
         return (
-            <>
+            <>  
+                <h1>Carrito</h1>
                 <p>No hay elementos en el carrito</p>
                 <Link to='/'>Hacer Compras</Link>
+                {isId && <h3>Orden generada con exito: {isId}</h3>}
 
             </>
         );
@@ -100,7 +102,6 @@ const Cart = () => {
 
                 <button onClick={clearCart}>Vaciar Carrito</button>
             </>
-       {isId && <p>Orden generada con exito: {isId}</p>}
         </div>
     )
 }
