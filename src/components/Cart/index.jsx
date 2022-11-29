@@ -28,7 +28,7 @@ const Cart = () => {
 
     const emitirCompra = () => {
         const db = getFirestore();
-        const ordersCollection = collection(db, 'order');
+        const ordersCollection = collection(db, 'orders');
         addDoc(ordersCollection, order)
     }
 
